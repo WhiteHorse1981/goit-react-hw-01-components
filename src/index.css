@@ -15,10 +15,10 @@ code {
     monospace;
 }
 
-#root {
-  height: 45rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
 }

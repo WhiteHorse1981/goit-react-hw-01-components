@@ -1,23 +1,21 @@
-import {Profile} from './Profile/Profile'
-import user from '../user.json'
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import user from '../user.json';
+import data from '../data.json';
 
 
 // console.log(user);
 export const App = () => {
-  return (
-    <div 
+  return (  
+    <div
       style={{
-        height: '25rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        width: '450px',
-        margin: 'auto',
         backgroundColor: '#E7ECF2',
-        paddingTop: '60px',
-        paddingBottom: '60px'
+        flexDirection: 'column'
       }}
     >
       <Profile 
@@ -30,6 +28,9 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-    </div>
+
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      </div>
   );
 };
