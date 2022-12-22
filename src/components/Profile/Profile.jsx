@@ -1,12 +1,20 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css'
 
-export const Profile = ({ avatar = "https://cdn-icons-png.flaticon.com/512/2922/2922506.png", username, tag, location,  followers, views, likes }) => {
+export const Profile = ({
+    avatar,
+    username,
+    tag,
+    location,
+    followers,
+    views,
+    likes }) => {
+   
     return (
         <div className={css.profile}>
             <div className={css.description}>
                 <img
-                    src={avatar}
+                    src={avatar}                     
                     alt="User avatar"
                     className={css.avatar}
                 />
@@ -31,6 +39,7 @@ export const Profile = ({ avatar = "https://cdn-icons-png.flaticon.com/512/2922/
             </ul>
         </div>
     );
+    
 };
 
 Profile.propTypes = {
