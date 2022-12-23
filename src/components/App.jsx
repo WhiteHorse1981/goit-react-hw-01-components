@@ -1,23 +1,17 @@
+import css from 'components/App.module.css';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../user.json';
 import data from '../data.json';
+import friends from '../friends.json';
+import transactions from '../transactions.json';
 
 
-// console.log(user);
 export const App = () => {
   return (  
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        backgroundColor: '#E7ECF2',
-        flexDirection: 'column'
-      }}
-    >
+    <div className={css.boxApp}>
       <Profile 
         key={user.username}
         avatar={user.avatar}
@@ -31,6 +25,10 @@ export const App = () => {
 
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
       </div>
   );
 };
