@@ -11,7 +11,7 @@ export const Profile = ({
     likes }) => {
    
     return (
-        <div className={css.profile}>
+        <div key={username} className={css.profile}>
             <div className={css.description}>
                 <img
                     src={avatar}                     
@@ -43,11 +43,11 @@ export const Profile = ({
 };
 
 Profile.propTypes = {
-    username: PropTypes.string,
-    tag: PropTypes.string,
-    location: PropTypes.string,
-    avatar: PropTypes.string,
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
 }
