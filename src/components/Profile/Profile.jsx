@@ -11,7 +11,7 @@ export const Profile = ({
     likes }) => {
    
     return (
-        <div key={username} className={css.profile}>
+        <div className={css.profile}>
             <div className={css.description}>
                 <img
                     src={avatar}                     
